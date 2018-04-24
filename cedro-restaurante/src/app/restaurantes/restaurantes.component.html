@@ -1,3 +1,32 @@
-<p>
-  restaurantes works!
-</p>
+<h4>Restaurantes</h4>
+
+<div class="form-group">
+  <input name="nome" [(ngModel)]="filter.nome" type="text" class="form-control" placeholder="Informe o restaurante que deseja procurar">
+</div>
+
+<a href="/restaurante/create" class="btn">
+  <i class="material-icons left">add</i> Cadastrar novo restaurante
+</a>
+
+<table class="responsive-table">
+  <thead>
+    <tr>
+        <th style="width: 150px">#</th>
+        <th>Restaurante</th>        
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let restaurante of restaurantes | restauranteFilter:filter"> 
+      <td style="width: 150px">
+        <a href="/restaurante/edit/{{restaurante.id}}" class="btn-flat">
+          <i class="material-icons">mode_edit</i>
+        </a>       
+        <a (click)="delete(restaurante)" class="btn-flat">
+          <i class="material-icons">delete</i>
+        </a>         
+      </td>     
+      <td>{{restaurante.nome}}</td>      
+    </tr>    
+  </tbody>
+</table>

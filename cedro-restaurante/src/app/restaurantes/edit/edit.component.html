@@ -1,0 +1,18 @@
+<h4>Editar restaurante</h4>
+
+<form [formGroup]="restauranteForm">
+  <div class="row">
+    <div class="input-field col s12">
+      <input formControlName="nome" type="text" value="{{restaurante?.nome}}" placeholder="" [ngModel]="restaurante?.nome">
+      <label class="active" for="nome">Nome do Restaurante</label>
+    </div>
+  </div>  
+  <div class="row">
+      <a class="btn waves-effect waves-light red" href="/restaurante" name="action">Cancelar
+        <i class="material-icons left">cancel</i>
+      </a>
+      <button (click)="update(restauranteForm.value)" type="button" class="btn waves-effect waves-light" name="action">Salvar
+        <i class="material-icons left">save</i>
+      </button>
+  </div>
+</form>

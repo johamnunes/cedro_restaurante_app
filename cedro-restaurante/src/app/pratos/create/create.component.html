@@ -1,0 +1,32 @@
+<h4>Cadastrar prato</h4>
+
+<form [formGroup]="pratoForm">
+  <div class="row">
+    <div class="col s12">
+        <label for="restauranteId">Restaurante</label>
+        <select style="display: inline;" formControlName="restauranteId" >
+            <option *ngFor="let restaurante of restaurantes" [ngValue]="restaurante.id"> 
+                {{restaurante.nome}} 
+            </option>
+        </select>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s9">
+        <input formControlName="descricao" type="text" >
+        <label for="descricao">Descrição</label>
+    </div>
+    <div class="input-field col s3">
+        <input formControlName="valor" type="text" >
+        <label for="valor">Preço</label>
+    </div>
+  </div>  
+  <div class="row">
+      <a class="btn waves-effect waves-light red" href="/prato" name="action">Cancelar
+        <i class="material-icons left">cancel</i>
+      </a>
+      <button (click)="save(pratoForm.value)" type="button" class="btn waves-effect waves-light" name="action">Salvar
+        <i class="material-icons left">save</i>
+      </button>
+  </div>
+</form>

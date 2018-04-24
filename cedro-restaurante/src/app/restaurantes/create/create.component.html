@@ -1,3 +1,18 @@
-<p>
-  create works!
-</p>
+<h4>Cadastrar restaurante</h4>
+
+<form [formGroup]="restauranteForm">
+  <div class="row">
+    <div class="input-field col s12">
+      <input formControlName="nome" type="text" >
+      <label for="nome">Nome do Restaurante</label>
+    </div>
+  </div>  
+  <div class="row">
+      <a class="btn waves-effect waves-light red" href="/restaurante" name="action">Cancelar
+        <i class="material-icons left">cancel</i>
+      </a>
+      <button (click)="save(restauranteForm.value)" type="button" class="btn waves-effect waves-light" name="action">Salvar
+        <i class="material-icons left">save</i>
+      </button>
+  </div>
+</form>

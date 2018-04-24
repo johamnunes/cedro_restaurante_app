@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RestaurantesComponent } from './restaurantes.component';
 import { RestauranteCreateComponent } from './create/restaurante-create.component';
 import { RestauranteEditComponent } from './edit/restaurante-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RestauranteFilterPipe } from '../pipes/restaurante-filter.pipe';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     RestaurantesComponent,
     RestauranteCreateComponent,
-    RestauranteEditComponent
+    RestauranteEditComponent,
+    RestauranteFilterPipe
     ],
   exports : [
     RestauranteCreateComponent,

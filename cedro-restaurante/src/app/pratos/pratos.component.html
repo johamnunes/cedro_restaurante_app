@@ -1,4 +1,13 @@
-<h2>PRATOS</h2>
+<h4>PRATOS</h4>
+
+<div class="form-group">
+  <input name="descricao" [(ngModel)]="filter.descricao" type="text" class="form-control" placeholder="Informe o prato que deseja procurar">
+</div>
+
+
+<a href="/prato/create" class="btn">
+  <i class="material-icons left">add</i> Cadastrar novo prato
+</a>
 
 <table class="table">
   <thead>
@@ -10,23 +19,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+    <tr *ngFor="let prato of pratos | pratoFilter:filter">
+      <td style="width: 150px">
+        <a href="/prato/edit/{{prato.id}}" class="btn-flat">
+          <i class="material-icons">mode_edit</i>
+        </a>       
+        <a (click)="delete(prato)" class="btn-flat">
+          <i class="material-icons">delete</i>
+        </a>         
+      </td>     
+      <td>{{prato.restaurante.nome}}</td>
+      <td>{{prato.descricao}}</td>
+      <td>{{prato.valor}}</td>
     </tr>
   </tbody>
 </table>
