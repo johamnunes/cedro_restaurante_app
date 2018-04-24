@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurantes',
-  templateUrl: './restaurantes.component.html',
-  styleUrls: ['./restaurantes.component.css']
+  templateUrl: './restaurantes.component.html'
 })
 export class RestaurantesComponent implements OnInit {
   restaurantes: Restaurante[]

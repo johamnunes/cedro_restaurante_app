@@ -7,8 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-prato-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  templateUrl: './edit.component.html'
 })
 export class PratoEditComponent implements OnInit {
   pratoForm: FormGroup

@@ -7,8 +7,7 @@ import { assertNotNull } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-restaurante-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  templateUrl: './edit.component.html'
 })
 export class RestauranteEditComponent implements OnInit {
   restauranteForm: FormGroup

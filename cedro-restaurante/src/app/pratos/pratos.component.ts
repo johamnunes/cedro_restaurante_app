@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pratos',
-  templateUrl: './pratos.component.html',
-  styleUrls: ['./pratos.component.css']
+  templateUrl: './pratos.component.html'
 })
 export class PratosComponent implements OnInit {
   pratos: Prato[];

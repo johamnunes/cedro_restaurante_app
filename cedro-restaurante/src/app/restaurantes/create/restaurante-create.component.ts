@@ -6,8 +6,7 @@ import { Restaurante } from '../restaurante.model';
 
 @Component({
   selector: 'app-restaurante-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  templateUrl: './create.component.html'
 })
 export class RestauranteCreateComponent implements OnInit {
   restauranteForm: FormGroup
